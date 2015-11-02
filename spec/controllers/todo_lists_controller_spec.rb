@@ -50,6 +50,7 @@ describe TodoListsController do
     it "assigns a new todo_list as @todo_list" do
       get :new, {}, valid_session
       assigns(:todo_list).should be_a_new(TodoList)
+      redirect_to root_path
     end
   end
 
